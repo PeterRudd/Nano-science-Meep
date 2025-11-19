@@ -1,0 +1,35 @@
+# Meep Waveguide Tutorial - Python Dependencies
+#
+# IMPORTANT: Meep installation via pip can be tricky due to system dependencies.
+# We STRONGLY recommend using conda instead:
+#
+#   conda create -n meep python=3.10
+#   conda activate meep
+#   conda install -c conda-forge pymeep
+#
+# Then install the remaining packages:
+#   pip install matplotlib numpy jupyter
+#
+
+# Core electromagnetic simulation library
+# Note: This may fail with pip - use conda instead (see above)
+meep>=1.25.0
+
+# Numerical computing
+numpy>=1.21.0
+
+# Visualization
+matplotlib>=3.5.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+notebook>=6.4.0
+ipython>=7.30.0
+
+# Optional but recommended
+scipy>=1.7.0          # For signal processing and analysis
+h5py>=3.6.0           # For saving/loading simulation data
+pillow>=9.0.0         # For image export
+
+# Style (optional)
+# Use 'seaborn-v0_8-darkgrid' style in matplotlib
