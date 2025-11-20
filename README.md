@@ -15,7 +15,7 @@ Welcome to the **most comprehensive** Meep tutorial series! Learn nanophotonics 
 ```
 Nano-science-Meep/
 ├── lessons/
-│   ├── lesson_1/          # Fields in a Waveguide
+│   ├── lesson_1/          # Basics - Complete Meep Tutorial
 │   │   ├── README.md
 │   │   ├── meep_waveguide_tutorial.ipynb
 │   │   ├── meep_helpers.py
@@ -30,27 +30,23 @@ Nano-science-Meep/
 
 ## Lessons Overview
 
-### 📘 Lesson 1: Fields in a Waveguide
-**Status:** ✅ Complete | **Time:** 2-3 hours | **Level:** Beginner-friendly
+### 📘 Lesson 1: Basics - Python Tutorial
+**Status:** ~8% Complete (1/12 sections done) | **Time:** 12-20 hours | **Level:** Beginner to Advanced
 
-Learn the fundamentals of Meep by simulating light propagation in waveguides.
+Learn the fundamentals of Meep through comprehensive examples covering waveguides, scattering, resonators, and 3D visualization.
 
-**Topics:**
-1. **A Straight Waveguide** - Field patterns from a CW source
-   - Computational cell setup
-   - Geometry definition with `Block` objects
-   - Source configuration
-   - PML boundaries
-   - Field visualization
-
-2. **A 90° Bend** (Coming Soon)
-   - Bending loss analysis
-   - Time-series animations
-
-3. **Output Tips and Tricks** (Coming Soon)
-   - Efficient data output
-   - HDF5 format
-   - Visualization techniques
+**Main Sections:**
+1. **The Meep Library** - Overview and core concepts
+2. **Fields in a Waveguide**
+   - A Straight Waveguide ✅ (Complete)
+   - A 90° Bend (Coming Soon)
+   - Output Tips and Tricks (Coming Soon)
+3. **Transmittance Spectrum of a Waveguide Bend** - Frequency-domain analysis
+4. **Angular Reflectance Spectrum** - Planar interface validation
+5. **Mie Scattering** - Dielectric sphere scattering and cross-sections
+6. **Absorbed Power Density Map** - Lossy cylinder analysis
+7. **Modes of a Ring Resonator** - Q-factor and symmetry exploitation
+8. **Visualizing 3D Structures** - Geometry visualization techniques
 
 **Quick Start:**
 ```bash
@@ -127,30 +123,32 @@ You should see:
 ## Learning Paths
 
 ### 🎯 Path 1: Absolute Beginner (New to Everything)
-**Time commitment:** ~4-6 hours
+**Time commitment:** ~12-15 hours for Lesson 1
 
 1. Start with Lesson 1
-2. Run `quick_start.py` first
-3. Read **only 🟢 beginner sections** in the notebook
-4. Run all code cells
-5. Try **easy exercises**
-6. Return later for intermediate/advanced content
+2. Run `quick_start.py` first (Section 2.1)
+3. Read **only 🟢 beginner sections** in all notebooks
+4. Work through sections sequentially (1→2→3→...→8)
+5. Run all code cells and observe outputs
+6. Try **easy exercises** for each section
+7. Return later for intermediate/advanced content
 
 **You'll learn:**
 - What is electromagnetic simulation
-- How waveguides work
-- Basic Meep commands
-- How to visualize results
+- How waveguides, scatterers, and resonators work
+- Complete Meep workflow from setup to visualization
+- How to validate simulations against theory
 
 ### 🎯 Path 2: Physics/Engineering Background
-**Time commitment:** ~6-10 hours
+**Time commitment:** ~15-20 hours for Lesson 1
 
 1. Start with Lesson 1, reading **🟢 and 🟡 sections**
-2. Study the equations and theory
-3. Try **medium exercises** (parameter exploration)
-4. Use helper functions for validation
-5. Proceed to Lesson 2
-6. Apply to your own designs
+2. Study the equations and analytical comparisons
+3. Focus on sections relevant to your interests
+4. Try **medium exercises** (parameter exploration)
+5. Use helper functions for validation
+6. Proceed to Lesson 2
+7. Apply to your own designs
 
 **You'll learn:**
 - Maxwell's equations in FDTD
@@ -159,19 +157,20 @@ You should see:
 - How to validate simulations
 
 ### 🎯 Path 3: Advanced User (Experienced in EM)
-**Time commitment:** ~3-5 hours
+**Time commitment:** ~10-12 hours for Lesson 1
 
 1. Skim beginner content, focus on **🔴 advanced sections**
-2. Study FDTD implementation details
+2. Study FDTD implementation details across all examples
 3. Try **hard exercises** (custom analysis, optimization)
-4. Modify helper modules for your needs
-5. Quickly progress through all lessons
+4. Modify helper modules for your specific needs
+5. Complete all 8 sections for comprehensive mastery
+6. Quickly progress through subsequent lessons
 
 **You'll learn:**
-- Meep implementation details
-- Numerical methods and stability
-- Performance optimization
-- Advanced analysis techniques
+- Meep implementation details and numerical methods
+- FDTD stability and convergence criteria
+- Performance optimization and parallelization
+- Advanced analysis techniques (mode decomposition, far-field, etc.)
 
 ## Teaching Philosophy
 

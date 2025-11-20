@@ -1,21 +1,44 @@
-# Lesson 1: Fields in a Waveguide
+# Lesson 1: Basics - Python Tutorial
 
 **Based on:** [Meep Python Tutorial - Basics](https://meep.readthedocs.io/en/latest/Python_Tutorials/Basics/)
 
-Welcome to Lesson 1! This lesson teaches you how to simulate electromagnetic fields in waveguide structures using Meep's FDTD method. We follow the **Jeremy Howard teaching style**: learn by doing, with clear expectations and tests.
+Welcome to Lesson 1! This comprehensive tutorial covers the fundamentals of Meep through a series of practical examples. We follow the **Jeremy Howard teaching style**: learn by doing, with clear expectations and tests, following the official Meep tutorial structure with enhanced explanations.
 
 ## What You'll Learn
 
-- **A Straight Waveguide**: Field patterns excited by a localized CW source
-- **Waveguide physics**: How light propagates and is confined in nanoscale structures
-- **Practical Meep skills**: Setup geometry, sources, boundaries, and visualization
+- **The Meep Library**: Understanding the core components and structure
+- **Waveguide simulations**: Fields, bends, and transmission analysis
+- **Scattering problems**: Interfaces, spheres, and cylinders
+- **Resonators**: Ring resonator modes and symmetry exploitation
+- **3D visualization**: Techniques for complex geometries
 - **Three-level understanding**: Beginner → Intermediate → Advanced explanations
 
 ## Lesson Structure
 
-This lesson follows the official Meep tutorial structure with enhanced explanations and experimental components:
+This lesson follows the complete official Meep Basics tutorial structure:
 
-### 1. A Straight Waveguide
+### 1. The Meep Library
+
+**Topics covered:**
+- Overview of Meep's Python interface
+- Core concepts and terminology
+- Units and conventions
+- Basic workflow
+
+**Learning objectives:**
+- 🟢 **Beginner**: Understand what Meep is and basic concepts
+- 🟡 **Intermediate**: Learn the library structure and conventions
+- 🔴 **Advanced**: Understand implementation architecture
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 2. Fields in a Waveguide
+
+**Main topics:**
+
+#### 2.1 A Straight Waveguide
 
 **Topics covered:**
 - Computational cell specification
@@ -27,31 +50,197 @@ This lesson follows the official Meep tutorial structure with enhanced explanati
 - Field computation and analysis
 - Output visualization using NumPy and Matplotlib
 
-**Files:**
-- `meep_waveguide_tutorial.ipynb` - Interactive tutorial with 3-level explanations
-- `quick_start.py` - Quick demo script (run first!)
-- `meep_helpers.py` - Test utilities and analysis functions
+**Learning objectives:**
+- 🟢 **Beginner**: Run your first waveguide simulation
+- 🟡 **Intermediate**: Understand single-mode vs multi-mode operation
+- 🔴 **Advanced**: FDTD grid setup and stability conditions
 
-### 2. A 90° Bend (Coming Soon)
+**Status:** ✅ Complete
+**Files:** `meep_waveguide_tutorial.ipynb`, `quick_start.py`, `meep_helpers.py`
 
-**Topics to be covered:**
+#### 2.2 A 90° Bend
+
+**Topics covered:**
 - Modified geometry with perpendicular waveguide segments
-- Line source implementation
-- Gradual source turn-on
-- Time-series analysis
-- Animation creation
+- Line source implementation with `size` property
+- Gradual source turn-on using `width` parameter
+- Alternative wavelength specification method
+- Output to HDF5 format across time dimension
+- Animation creation from time-series data
 
-### 3. Output Tips and Tricks (Coming Soon)
+**Learning objectives:**
+- 🟢 **Beginner**: Simulate light bending around corners
+- 🟡 **Intermediate**: Understand bending losses and mode coupling
+- 🔴 **Advanced**: Optimize bend radius for minimum loss
 
-**Topics to be covered:**
-- Efficient PNG image output
-- Volume-restricted output
+**Status:** 📝 Coming Soon
+
+#### 2.3 Output Tips and Tricks
+
+**Topics covered:**
+- Efficient PNG image output versus raw data storage
+- Volume-restricted output using `in_volume`
 - Output directory organization
 - Space-time slice generation
 
-## Quick Start (5 minutes)
+**Learning objectives:**
+- 🟢 **Beginner**: Save and visualize simulation results
+- 🟡 **Intermediate**: Optimize data output for large simulations
+- 🔴 **Advanced**: Custom output functions and HDF5 manipulation
 
-### 1. Install Dependencies
+**Status:** 📝 Coming Soon
+
+---
+
+### 3. Transmittance Spectrum of a Waveguide Bend
+
+**Topics covered:**
+- Frequency-domain analysis using pulsed sources
+- Flux region definition and measurement
+- Normalization runs for accurate transmission
+- Transmission spectrum calculation
+- Resonance identification
+
+**Learning objectives:**
+- 🟢 **Beginner**: Measure how much light gets through a bend
+- 🟡 **Intermediate**: Calculate wavelength-dependent transmission
+- 🔴 **Advanced**: Understand flux plane placement and convergence
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 4. Angular Reflectance Spectrum of a Planar Interface
+
+**Topics covered:**
+- Planar interface setup (air-dielectric boundary)
+- Oblique angle incidence
+- Reflection and transmission coefficients
+- Angular dependence analysis
+- Comparison with Fresnel equations
+
+**Learning objectives:**
+- 🟢 **Beginner**: Understand reflection at interfaces
+- 🟡 **Intermediate**: Validate against analytical Fresnel formulas
+- 🔴 **Advanced**: Handle numerical dispersion at oblique angles
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 5. Mie Scattering of a Lossless Dielectric Sphere
+
+**Main topics:**
+
+#### 5.1 Scattering Cross-Section
+
+**Topics covered:**
+- 3D spherical geometry setup
+- Planewave source implementation
+- Far-field flux measurements
+- Scattering cross-section calculation
+- Validation against Mie theory
+
+**Learning objectives:**
+- 🟢 **Beginner**: Simulate light scattering from a sphere
+- 🟡 **Intermediate**: Calculate scattering cross-sections
+- 🔴 **Advanced**: Near-to-far field transformations
+
+#### 5.2 Differential/Radar Cross Section
+
+**Topics covered:**
+- Angular scattering patterns
+- Differential cross-section (DCS)
+- Radar cross-section (RCS)
+- Far-field decomposition
+- Validation with analytical solutions
+
+**Learning objectives:**
+- 🟢 **Beginner**: Visualize scattering patterns
+- 🟡 **Intermediate**: Compute angular distributions
+- 🔴 **Advanced**: Optimize far-field calculations for accuracy
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 6. Absorbed Power Density Map of a Lossy Cylinder
+
+**Topics covered:**
+- Lossy material specification (complex permittivity)
+- Power absorption calculations
+- Field intensity mapping
+- 2D visualization of absorption
+- Applications to heating and sensing
+
+**Learning objectives:**
+- 🟢 **Beginner**: See where energy is absorbed in materials
+- 🟡 **Intermediate**: Calculate absorption cross-sections
+- 🔴 **Advanced**: Implement complex dispersive materials
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 7. Modes of a Ring Resonator
+
+**Main topics:**
+
+#### 7.1 Ring Resonator Simulation
+
+**Topics covered:**
+- Ring resonator geometry setup
+- Mode excitation techniques
+- Quality factor (Q) measurement
+- Free spectral range (FSR) calculation
+- Resonance peak identification
+
+**Learning objectives:**
+- 🟢 **Beginner**: Understand what a ring resonator is
+- 🟡 **Intermediate**: Design resonators with target Q and FSR
+- 🔴 **Advanced**: Mode coupling theory and critical coupling
+
+#### 7.2 Exploiting Symmetry
+
+**Topics covered:**
+- Mirror symmetries in 2D
+- Even/odd field components
+- Computational speedup from symmetries
+- Symmetry-based mode selection
+- Limitations and considerations
+
+**Learning objectives:**
+- 🟢 **Beginner**: Use symmetries to speed up simulations
+- 🟡 **Intermediate**: Understand which symmetries apply to your problem
+- 🔴 **Advanced**: Implement custom symmetry constraints
+
+**Status:** 📝 Coming Soon
+
+---
+
+### 8. Visualizing 3D Structures
+
+**Topics covered:**
+- 3D geometry visualization techniques
+- Epsilon (permittivity) field plotting
+- Cross-sectional views
+- Interactive 3D visualization
+- Export for external rendering tools
+
+**Learning objectives:**
+- 🟢 **Beginner**: Visualize your 3D geometry before simulation
+- 🟡 **Intermediate**: Create publication-quality figures
+- 🔴 **Advanced**: Custom visualization scripts and VTK export
+
+**Status:** 📝 Coming Soon
+
+---
+
+## Quick Start (Currently Available)
+
+### A Straight Waveguide (Section 2.1)
+
+#### Installation (5 minutes)
 
 ```bash
 # Option A: Using conda (recommended for Meep)
@@ -63,17 +252,19 @@ conda install -c conda-forge pymeep matplotlib numpy jupyter
 pip install meep matplotlib numpy jupyter
 ```
 
-### 2. Test Your Installation
+#### Test Your Installation
 
 ```bash
+cd lessons/lesson_1
 python quick_start.py
 ```
 
-This will run a complete waveguide simulation and show you the results!
+This will run a complete straight waveguide simulation and show you the results!
 
-### 3. Launch the Interactive Tutorial
+#### Launch the Interactive Tutorial
 
 ```bash
+cd lessons/lesson_1
 jupyter notebook meep_waveguide_tutorial.ipynb
 ```
 
@@ -81,16 +272,15 @@ jupyter notebook meep_waveguide_tutorial.ipynb
 
 ## What to Expect
 
-When you run the tutorial, you'll:
+When you complete this lesson, you'll be able to:
 
-1. ✅ **Import Meep** and verify installation
-2. 🔲 **Define computational cell** (16 μm × 8 μm simulation space)
-3. 📦 **Create waveguide geometry** (1 μm wide, silicon-like material)
-4. 💡 **Add CW light source** (near-infrared frequency)
-5. 🌊 **Add PML boundaries** (absorbing boundaries to prevent reflections)
-6. 🚀 **Run FDTD simulation** (~5 seconds)
-7. 📊 **Visualize field patterns** (see light confined and propagating!)
-8. ✓ **Run automated tests** (verify single-mode operation)
+1. ✅ **Set up simulations** - Define geometry, sources, and boundaries
+2. ✅ **Run FDTD simulations** - Execute and monitor convergence
+3. ✅ **Analyze fields** - Extract and visualize electromagnetic fields
+4. ✅ **Calculate spectra** - Compute transmission and reflection
+5. ✅ **Measure cross-sections** - Scattering and absorption analysis
+6. ✅ **Optimize designs** - Use symmetries and understand trade-offs
+7. ✅ **Create visualizations** - Professional plots and animations
 
 ## Understanding at Three Levels
 
@@ -98,177 +288,159 @@ Each concept in the tutorial is explained at three levels:
 
 ### 🟢 Beginner: Simple Analogies
 - No prior physics knowledge required
-- Uses everyday examples (fiber optic cable, water pipes)
+- Uses everyday examples (fiber optics, radio antennas, mirrors)
 - Focus on "what" and "why"
 - **Start here if:** New to photonics or simulation
 
 ### 🟡 Intermediate: Physics & Math
-- Maxwell's equations and waveguide theory
-- Quantitative analysis (V-number, mode profiles)
+- Maxwell's equations and analytical solutions
+- Quantitative analysis (Q-factors, cross-sections, Fresnel equations)
 - Design principles and rules of thumb
 - **Start here if:** Physics or engineering background
 
 ### 🔴 Advanced: Implementation Details
 - FDTD algorithm (Yee lattice, Courant condition)
 - Numerical methods (PML, dispersion, stability)
-- Performance optimization
+- Performance optimization and parallelization
 - **Start here if:** Experienced in computational EM
 
 **Choose your level!** Read all three, or just the one that matches your background.
 
-## Key Concepts
-
-### Computational Cell
-The rectangular simulation domain where Maxwell's equations are solved:
-- **x-direction (16 μm)**: Long enough for fields to propagate and stabilize
-- **y-direction (8 μm)**: Wide enough that boundaries don't affect the waveguide mode
-- **z-direction (0)**: 2D simulation (faster than 3D)
-
-### Waveguide Geometry
-- **Material**: High refractive index core (ε = 12, n ≈ 3.46, silicon-like)
-- **Width**: 1 μm (designed for single-mode operation)
-- **Infinite length**: Using `mp.inf` in x-direction
-
-### Source
-- **Type**: Continuous wave (CW) at single frequency
-- **Frequency**: 0.15 (in Meep units, λ ≈ 6.67 μm)
-- **Position**: Near left edge to excite waveguide mode
-- **Component**: Ez (TE-like polarization in 2D)
-
-### Boundary Conditions
-- **PML layers**: 1 μm thick absorbing boundaries on all sides
-- **Purpose**: Simulate infinite space by absorbing outgoing waves
-
-### Resolution
-- **Setting**: 10 pixels per μm
-- **Rule of thumb**: Need >8 pixels per wavelength in material
-- **Trade-off**: Higher resolution = more accurate but slower
-
-## Using the Helper Module
-
-The `meep_helpers.py` file provides utilities for testing and analysis:
-
-### Quick Simulation
-
-```python
-from meep_helpers import quick_waveguide_simulation
-
-# Run simulation with one line!
-results = quick_waveguide_simulation(width=1.0, frequency=0.15)
-
-# Print test report
-results['tests'].print_report()
-```
-
-### Individual Tests
-
-```python
-from meep_helpers import WaveguideTests
-import numpy as np
-
-tests = WaveguideTests()
-
-# Test single-mode condition
-tests.test_single_mode_condition(
-    width=1.0,           # 1 μm wide
-    wavelength=6.67,     # 6.67 μm vacuum wavelength
-    n_core=3.46          # Silicon-like refractive index
-)
-
-# Print results
-tests.print_report()
-```
-
-### Analysis Tools
-
-```python
-from meep_helpers import WaveguideAnalysis
-
-# Calculate effective index
-n_eff = WaveguideAnalysis.calculate_effective_index(
-    field_data, cell_size, wavelength
-)
-
-# Measure decay length
-delta = WaveguideAnalysis.measure_decay_length(
-    field_data, waveguide_width, cell_size
-)
-
-# Plot mode profile
-WaveguideAnalysis.plot_mode_profile(
-    field_data, waveguide_width, cell_size
-)
-```
-
 ## Learning Paths
 
-### Path A: Absolute Beginner
-1. Run `quick_start.py` to see a working simulation
-2. Open the notebook and read **only 🟢 beginner sections**
-3. Run all code cells and observe the output
-4. Try the **easy exercises** at the end
-5. Come back later for intermediate/advanced sections
+### Path A: Absolute Beginner (Complete Lesson)
+**Time commitment:** ~12-15 hours
 
-### Path B: Some Physics Background
-1. Run `quick_start.py` for quick context
-2. Work through the notebook, reading **🟢 and 🟡 sections**
-3. Pay attention to equations and derivations
-4. Try **medium exercises** (modify parameters, observe changes)
+1. Start with Section 1: The Meep Library
+2. Work through Section 2: Fields in a Waveguide (currently run `quick_start.py`)
+3. Read **only 🟢 beginner sections**
+4. Run all code cells and observe outputs
+5. Try **easy exercises** for each section
+6. Progress through sections 3-8 sequentially
+7. Come back later for intermediate/advanced sections
+
+### Path B: Some Physics Background (Targeted Learning)
+**Time commitment:** ~15-20 hours
+
+1. Skim Section 1, focus on conventions
+2. Work through Section 2, reading **🟢 and 🟡 sections**
+3. Focus on sections most relevant to your interests:
+   - Waveguides → Sections 2-3
+   - Scattering → Sections 4-6
+   - Resonators → Section 7
+4. Try **medium exercises** (parameter exploration)
 5. Use helper functions to validate understanding
 
-### Path C: Advanced User
-1. Skim beginner sections, focus on **🔴 advanced**
-2. Study FDTD implementation details
-3. Try **hard exercises** (measure dispersion, add bends)
-4. Modify `meep_helpers.py` to add your own analysis tools
+### Path C: Advanced User (Comprehensive Mastery)
+**Time commitment:** ~10-12 hours
+
+1. Skim beginner content, focus on **🔴 advanced sections**
+2. Study FDTD implementation details in each section
+3. Try **hard exercises** (custom analysis, optimization)
+4. Modify helper modules for your specific needs
+5. Complete all sections for comprehensive understanding
+
+## Files and Resources
+
+### Current Files (Section 2.1 - A Straight Waveguide)
+- `meep_waveguide_tutorial.ipynb` - Interactive tutorial with 3-level explanations
+- `quick_start.py` - Quick demo script (run first!)
+- `meep_helpers.py` - Test utilities and analysis functions
+- `CHEATSHEET.md` - Quick reference for Meep commands
+
+### Coming Soon (Sections 1, 2.2-2.3, 3-8)
+Each section will include:
+- Interactive Jupyter notebook
+- Helper functions specific to that topic
+- Automated tests
+- Example scripts
+- Exercises at three levels
+
+## Key Concepts Reference
+
+### Simulation Components
+- **Geometry**: `Block`, `Cylinder`, `Sphere` objects
+- **Materials**: `Medium` with epsilon, mu, conductivity
+- **Sources**: `ContinuousSource`, `GaussianSource`, planewave
+- **Boundaries**: PML, periodic, mirror symmetries
+- **Outputs**: Field arrays, flux measurements, animations
+
+### Analysis Techniques
+- **Time domain**: Field evolution, animations
+- **Frequency domain**: Transmission/reflection spectra
+- **Spatial analysis**: Mode profiles, field distributions
+- **Scattering**: Cross-sections, far-field patterns
+- **Resonances**: Q-factors, mode frequencies
+
+### Common Parameters
+```python
+resolution = 10           # pixels per unit length
+frequency = 0.15          # in c/unit_length
+wavelength = 1/frequency  # in unit_length
+runtime = 200            # in time units
+pml_thickness = 1.0      # in unit_length
+```
 
 ## Testing Your Understanding
 
-Each section includes **automated tests** that verify simulation correctness:
+Automated tests (currently in Section 2.1) verify:
+- ✅ **Confinement Factor**: Is light trapped? (expect >80%)
+- ✅ **Single-Mode**: Is V-number < π/2?
+- ✅ **Field Amplitude**: Are fields non-zero and finite?
+- ✅ **Steady-State**: Did we run long enough?
+- ✅ **Resolution**: Enough pixels per wavelength?
 
-- ✅ **Confinement Factor**: Is light trapped in waveguide? (expect >80%)
-- ✅ **Single-Mode**: Is V-number < π/2? (expect ~1.5)
-- ✅ **Field Amplitude**: Are fields non-zero and finite? (expect 0.1-10)
-- ✅ **Steady-State**: Did we run long enough? (expect >10 cycles)
-- ✅ **Resolution**: Enough pixels per wavelength? (expect >8, better >10)
+Each future section will include similar targeted tests.
 
-**All tests should PASS** ✓ if your simulation is correct!
+## Exercises by Section
 
-## Exercises
+### Section 2.1 - A Straight Waveguide (Available Now)
 
-### 🟢 Easy
+#### 🟢 Easy
 1. Change frequency to 0.1 → observe longer wavelength
 2. Double resolution to 20 → see if result changes
 3. Remove PML → see reflections from boundaries
 
-### 🟡 Medium
+#### 🟡 Medium
 4. Make waveguide 2 μm wide → see higher-order modes
 5. Change material to ε=4 → see weaker confinement
 6. Add second source → observe interference
 
-### 🔴 Hard
+#### 🔴 Hard
 7. Use `GaussianSource` and measure group velocity
 8. Run at multiple frequencies → calculate dispersion
-9. Add a 90° bend → find minimum radius (prepares for section 2!)
+9. Add a 90° bend → find minimum radius
+
+### Sections 2.2-8 (Coming Soon)
+Each section will include exercises at three difficulty levels following the same format.
 
 ## Common Issues and Solutions
 
-### Problem: Import error `ModuleNotFoundError: No module named 'meep'`
-**Solution:** Install using conda:
-```bash
-conda install -c conda-forge pymeep
-```
+### Installation
+**Problem:** `ModuleNotFoundError: No module named 'meep'`
+**Solution:** Install using conda: `conda install -c conda-forge pymeep`
 
-### Problem: Simulation is very slow
+### Performance
+**Problem:** Simulation is very slow
 **Solution:**
-- Reduce resolution (try `resolution = 5`)
-- Reduce simulation time (try `run_time = 100`)
+- Reduce resolution: `resolution = 5`
+- Reduce runtime: `runtime = 100`
+- Use 2D instead of 3D
+- Exploit symmetries (Section 7.2)
 
-### Problem: No confinement visible
+### Accuracy
+**Problem:** No field confinement visible
 **Solution:**
-- Check that permittivity `epsilon > 1` (should be ~12)
+- Check permittivity: `epsilon > 1` (should be ~12)
 - Verify PML layers are present
-- Ensure simulation ran long enough (`run_time >= 100`)
+- Ensure runtime is sufficient: `runtime >= 100`
+
+### Numerical Issues
+**Problem:** Strange artifacts or instabilities
+**Solution:**
+- Increase resolution (especially near material interfaces)
+- Check Courant condition is satisfied (automatic in Meep)
+- Verify PML thickness is adequate (>= 0.5 wavelength)
 
 ## Resources
 
@@ -278,12 +450,33 @@ conda install -c conda-forge pymeep
 - [Meep Python API](https://meep.readthedocs.io/en/latest/Python_User_Interface/)
 
 ### Next Lesson
-- **Lesson 2**: Cylindrical Coordinates - Learn to exploit rotational symmetry for faster simulations
+- **Lesson 2**: Cylindrical Coordinates - Exploit rotational symmetry for faster simulations
 
 ### Textbooks
 - **Joannopoulos et al.**, "Photonic Crystals: Molding the Flow of Light"
 - **Taflove & Hagness**, "Computational Electrodynamics: The FDTD Method"
 - **Saleh & Teich**, "Fundamentals of Photonics"
+- **Bohren & Huffman**, "Absorption and Scattering of Light by Small Particles"
+
+### Community
+- [Meep Discussions](https://github.com/NanoComp/meep/discussions)
+- [Meep GitHub Issues](https://github.com/NanoComp/meep/issues)
+
+## Development Roadmap
+
+### ✅ Completed
+- Section 2.1: A Straight Waveguide
+
+### 📝 In Development (Priority Order)
+1. Section 1: The Meep Library
+2. Section 2.2: A 90° Bend
+3. Section 2.3: Output Tips and Tricks
+4. Section 3: Transmittance Spectrum of a Waveguide Bend
+5. Section 7: Modes of a Ring Resonator
+6. Section 4: Angular Reflectance Spectrum of a Planar Interface
+7. Section 5: Mie Scattering of a Lossless Dielectric Sphere
+8. Section 6: Absorbed Power Density Map of a Lossy Cylinder
+9. Section 8: Visualizing 3D Structures
 
 ## Philosophy: Jeremy Howard Style
 
@@ -294,9 +487,35 @@ This tutorial follows the **fast.ai teaching philosophy**:
 3. **Clear expectations**: Always know what to expect before running
 4. **Progressive disclosure**: Three levels (beginner → advanced)
 5. **Tests first**: Verify understanding with automated tests
+6. **Complete examples**: Full, working code from start to finish
 
 **Why?** Because you learn faster when you see immediate results, build intuition before equations, and test your knowledge!
 
 ---
 
-**Ready to start?** Run `python quick_start.py` or open `meep_waveguide_tutorial.ipynb`!
+## Current Status
+
+**Overall Progress:** ~8% complete (1 of 12 subsections)
+
+| Section | Status | Notebook | Tests | Exercises |
+|---------|--------|----------|-------|-----------|
+| 1. The Meep Library | 📝 | ❌ | ❌ | ❌ |
+| 2.1 A Straight Waveguide | ✅ | ✅ | ✅ | ✅ |
+| 2.2 A 90° Bend | 📝 | ❌ | ❌ | ❌ |
+| 2.3 Output Tips | 📝 | ❌ | ❌ | ❌ |
+| 3. Transmittance Spectrum | 📝 | ❌ | ❌ | ❌ |
+| 4. Angular Reflectance | 📝 | ❌ | ❌ | ❌ |
+| 5.1 Mie Scattering | 📝 | ❌ | ❌ | ❌ |
+| 5.2 Differential Cross Section | 📝 | ❌ | ❌ | ❌ |
+| 6. Absorbed Power Density | 📝 | ❌ | ❌ | ❌ |
+| 7.1 Ring Resonator | 📝 | ❌ | ❌ | ❌ |
+| 7.2 Exploiting Symmetry | 📝 | ❌ | ❌ | ❌ |
+| 8. Visualizing 3D | 📝 | ❌ | ❌ | ❌ |
+
+**Legend:** ✅ Complete | 📝 Coming Soon | ❌ Not Started
+
+---
+
+**Ready to start?** Run `python quick_start.py` to try Section 2.1, or open `meep_waveguide_tutorial.ipynb` for the interactive tutorial!
+
+**Have questions?** Check the [Meep FAQ](https://meep.readthedocs.io/en/latest/FAQ/) or [ask the community](https://github.com/NanoComp/meep/discussions)!
