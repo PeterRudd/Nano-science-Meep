@@ -31,7 +31,7 @@ Nano-science-Meep/
 ## Lessons Overview
 
 ### 📘 Lesson 1: Basics - Python Tutorial
-**Status:** ~8% Complete (1/12 sections done) | **Time:** 12-20 hours | **Level:** Beginner to Advanced
+**Status:** Section 2.1 Complete | **Time:** 12-20 hours | **Level:** Beginner to Advanced
 
 Learn the fundamentals of Meep through comprehensive examples covering waveguides, scattering, resonators, and 3D visualization.
 
@@ -39,13 +39,12 @@ Learn the fundamentals of Meep through comprehensive examples covering waveguide
 1. **The Meep Library** - Overview and core concepts
 2. **Fields in a Waveguide**
    - A Straight Waveguide ✅ (Complete)
-   - A 90° Bend (Coming Soon)
-   - Output Tips and Tricks (Coming Soon)
+   - A 90° Bend (includes Output Tips and Tricks)
 3. **Transmittance Spectrum of a Waveguide Bend** - Frequency-domain analysis
 4. **Angular Reflectance Spectrum** - Planar interface validation
-5. **Mie Scattering** - Dielectric sphere scattering and cross-sections
+5. **Mie Scattering** - Dielectric sphere (includes Differential/Radar Cross Section)
 6. **Absorbed Power Density Map** - Lossy cylinder analysis
-7. **Modes of a Ring Resonator** - Q-factor and symmetry exploitation
+7. **Modes of a Ring Resonator** - Q-factor (includes Exploiting Symmetry)
 8. **Visualizing 3D Structures** - Geometry visualization techniques
 
 **Quick Start:**

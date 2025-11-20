@@ -68,25 +68,16 @@ This lesson follows the complete official Meep Basics tutorial structure:
 - Output to HDF5 format across time dimension
 - Animation creation from time-series data
 
-**Learning objectives:**
-- 🟢 **Beginner**: Simulate light bending around corners
-- 🟡 **Intermediate**: Understand bending losses and mode coupling
-- 🔴 **Advanced**: Optimize bend radius for minimum loss
-
-**Status:** 📝 Coming Soon
-
-#### 2.3 Output Tips and Tricks
-
-**Topics covered:**
+**Subtopic: Output Tips and Tricks**
 - Efficient PNG image output versus raw data storage
 - Volume-restricted output using `in_volume`
 - Output directory organization
 - Space-time slice generation
 
 **Learning objectives:**
-- 🟢 **Beginner**: Save and visualize simulation results
-- 🟡 **Intermediate**: Optimize data output for large simulations
-- 🔴 **Advanced**: Custom output functions and HDF5 manipulation
+- 🟢 **Beginner**: Simulate light bending around corners and save results efficiently
+- 🟡 **Intermediate**: Understand bending losses, create animations, and optimize output
+- 🔴 **Advanced**: Optimize bend radius for minimum loss and custom HDF5 output
 
 **Status:** 📝 Coming Soon
 
@@ -130,10 +121,6 @@ This lesson follows the complete official Meep Basics tutorial structure:
 
 ### 5. Mie Scattering of a Lossless Dielectric Sphere
 
-**Main topics:**
-
-#### 5.1 Scattering Cross-Section
-
 **Topics covered:**
 - 3D spherical geometry setup
 - Planewave source implementation
@@ -141,14 +128,9 @@ This lesson follows the complete official Meep Basics tutorial structure:
 - Scattering cross-section calculation
 - Validation against Mie theory
 
-**Learning objectives:**
-- 🟢 **Beginner**: Simulate light scattering from a sphere
-- 🟡 **Intermediate**: Calculate scattering cross-sections
-- 🔴 **Advanced**: Near-to-far field transformations
+#### Subsection: Differential/Radar Cross Section
 
-#### 5.2 Differential/Radar Cross Section
-
-**Topics covered:**
+**Additional topics:**
 - Angular scattering patterns
 - Differential cross-section (DCS)
 - Radar cross-section (RCS)
@@ -156,9 +138,9 @@ This lesson follows the complete official Meep Basics tutorial structure:
 - Validation with analytical solutions
 
 **Learning objectives:**
-- 🟢 **Beginner**: Visualize scattering patterns
-- 🟡 **Intermediate**: Compute angular distributions
-- 🔴 **Advanced**: Optimize far-field calculations for accuracy
+- 🟢 **Beginner**: Simulate light scattering from a sphere and visualize patterns
+- 🟡 **Intermediate**: Calculate scattering and radar cross-sections
+- 🔴 **Advanced**: Near-to-far field transformations and optimize accuracy
 
 **Status:** 📝 Coming Soon
 
@@ -184,10 +166,6 @@ This lesson follows the complete official Meep Basics tutorial structure:
 
 ### 7. Modes of a Ring Resonator
 
-**Main topics:**
-
-#### 7.1 Ring Resonator Simulation
-
 **Topics covered:**
 - Ring resonator geometry setup
 - Mode excitation techniques
@@ -195,14 +173,9 @@ This lesson follows the complete official Meep Basics tutorial structure:
 - Free spectral range (FSR) calculation
 - Resonance peak identification
 
-**Learning objectives:**
-- 🟢 **Beginner**: Understand what a ring resonator is
-- 🟡 **Intermediate**: Design resonators with target Q and FSR
-- 🔴 **Advanced**: Mode coupling theory and critical coupling
+#### Subsection: Exploiting Symmetry
 
-#### 7.2 Exploiting Symmetry
-
-**Topics covered:**
+**Additional topics:**
 - Mirror symmetries in 2D
 - Even/odd field components
 - Computational speedup from symmetries
@@ -210,9 +183,9 @@ This lesson follows the complete official Meep Basics tutorial structure:
 - Limitations and considerations
 
 **Learning objectives:**
-- 🟢 **Beginner**: Use symmetries to speed up simulations
-- 🟡 **Intermediate**: Understand which symmetries apply to your problem
-- 🔴 **Advanced**: Implement custom symmetry constraints
+- 🟢 **Beginner**: Understand ring resonators and use symmetries to speed up simulations
+- 🟡 **Intermediate**: Design resonators with target Q and FSR, apply appropriate symmetries
+- 🔴 **Advanced**: Mode coupling theory, critical coupling, and custom symmetry constraints
 
 **Status:** 📝 Coming Soon
 
@@ -495,24 +468,24 @@ This tutorial follows the **fast.ai teaching philosophy**:
 
 ## Current Status
 
-**Overall Progress:** ~8% complete (1 of 12 subsections)
+**Overall Progress:** Section 2.1 complete (1 subsection of Section 2 done)
 
 | Section | Status | Notebook | Tests | Exercises |
 |---------|--------|----------|-------|-----------|
 | 1. The Meep Library | 📝 | ❌ | ❌ | ❌ |
-| 2.1 A Straight Waveguide | ✅ | ✅ | ✅ | ✅ |
-| 2.2 A 90° Bend | 📝 | ❌ | ❌ | ❌ |
-| 2.3 Output Tips | 📝 | ❌ | ❌ | ❌ |
+| 2. Fields in a Waveguide | 🔨 | 🔨 | 🔨 | 🔨 |
+| ↳ 2.1 A Straight Waveguide | ✅ | ✅ | ✅ | ✅ |
+| ↳ 2.2 A 90° Bend (+Output Tips) | 📝 | ❌ | ❌ | ❌ |
 | 3. Transmittance Spectrum | 📝 | ❌ | ❌ | ❌ |
 | 4. Angular Reflectance | 📝 | ❌ | ❌ | ❌ |
-| 5.1 Mie Scattering | 📝 | ❌ | ❌ | ❌ |
-| 5.2 Differential Cross Section | 📝 | ❌ | ❌ | ❌ |
+| 5. Mie Scattering | 📝 | ❌ | ❌ | ❌ |
+| ↳ 5a. Differential/Radar Cross Section | 📝 | ❌ | ❌ | ❌ |
 | 6. Absorbed Power Density | 📝 | ❌ | ❌ | ❌ |
-| 7.1 Ring Resonator | 📝 | ❌ | ❌ | ❌ |
-| 7.2 Exploiting Symmetry | 📝 | ❌ | ❌ | ❌ |
-| 8. Visualizing 3D | 📝 | ❌ | ❌ | ❌ |
+| 7. Modes of a Ring Resonator | 📝 | ❌ | ❌ | ❌ |
+| ↳ 7a. Exploiting Symmetry | 📝 | ❌ | ❌ | ❌ |
+| 8. Visualizing 3D Structures | 📝 | ❌ | ❌ | ❌ |
 
-**Legend:** ✅ Complete | 📝 Coming Soon | ❌ Not Started
+**Legend:** ✅ Complete | 🔨 In Progress | 📝 Coming Soon | ❌ Not Started
 
 ---
 
